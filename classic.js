@@ -17,11 +17,35 @@ window.onload = function () {
     $('.brC-dA-I-Jw.brC-aMv-auO').attr('role','navigation');
     $('.aT5-aOt-I.brC-dA-I.aT5-aOt-I-Jp').attr('aria-pressed','true');
     $('.aT5-aOt-I.brC-dA-I.aT5-aOt-I-Jp').attr('aria-label','Show side panel');
+	chrome.storage.sync.get({
+		everything: true,
+		compose: true,
+		buttons:true,
+		shadow:true,
+		lefticons:true
+    }, function(items) {
+		if(items.everything){
+			//loadCSS('classic');
+			loadCSS('shadow');
+			loadCSS('compose');
+			loadCSS('lefticons');
+			loadCSS('buttons');
+		}else{
+			if(items.shadow)
+				loadCSS('shadow');
+			if(items.compose)
+				loadCSS('compose');
+			if(items.buttons)
+				loadCSS('buttons');
+			if(items.lefticons)
+				loadCSS('lefticons');
+		}
+    });
     console.log('done');
 }
-loadCSS('classic');
+//loadCSS('classic');
 function loadCSS(file) {
-    console.log('loading');
+    console.log('loading:'+file);
     var link = document.createElement("link");
     link.href = chrome.extension.getURL(file + '.css');
     link.id = file;
@@ -29,7 +53,6 @@ function loadCSS(file) {
     link.rel = "stylesheet";
     document.getElementsByTagName("html")[0].appendChild(link);
 }
-
 function unloadCSS(file) {
     console.log('unloading');
     var cssNode = document.getElementById(file);

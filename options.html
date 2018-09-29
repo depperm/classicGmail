@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classic Gmail Options</title>
+	<style>
+	body{
+		min-width:200px;
+		overflow-x:hidden;
+	}
+	#status{
+		font-size:16px;
+	}
+	</style>
+	<script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<input type="checkbox" id='everything' class='classic-gmail-checkbox' checked='true' />
+	Everything
+	<hr>
+	<label>
+		<input type="checkbox" id='compose' class='specific classic-gmail-checkbox' checked='true' />
+		Old compose button
+	</label>
+	<br />
+	<label>
+		<input type="checkbox" id='buttons' class='specific classic-gmail-checkbox' checked='true' />
+		Cleaner buttons at the top
+	</label>
+	<br />
+	<label>
+		<input type="checkbox" id='shadow' class='specific classic-gmail-checkbox' checked='true' />
+		No inbox mouseover shadow
+	</label>
+	<br />
+	<label>
+		<input type="checkbox" id='lefticons' class='specific classic-gmail-checkbox' checked='true' />
+		Left icons by folder name
+	</label>
+
+	<div id="status"></div>
+	<button id="save">Save</button>
+
+	<script src="options.js"></script>
+</body>
+</html>

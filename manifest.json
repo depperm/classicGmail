@@ -1,17 +1,24 @@
 {
     "name": "Gmail Classic",
-    "version": "1.0",
+    "version": "1.2",
     "description": "Revert my gmail",
     "manifest_version": 2,
+	"browser_action": {
+		"default_popup": "options.html",
+		"default_title": "Classic Gmail Options"
+	},
+	"permissions": [
+		"storage","activeTab"
+	  ],
     "web_accessible_resources": [
-      	"classic.css"
+      	"classic.js","shadow.css","buttons.css","compose.css","lefticons.css"
     ],
     "background":{
         "scripts":["jquery-3.3.1.min.js"]
     },
 	"content_scripts": [
 		{
-		  "matches": ["https://mail.google.com/mail/*"],
+		  "matches": ["https://mail.google.com/mail/u/0*"],
 		  "js": ["jquery-3.3.1.min.js","classic.js"],
 		  "run_at":"document_start"
 		}

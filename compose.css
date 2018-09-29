@@ -1,0 +1,26 @@
+/*get rid of the + image on compose btn*/
+.z0>.L3::before {
+  content: none !important;
+  background-image:none !important;
+  min-width:0px !important;
+}
+/*change compose btn shape*/
+.T-I.J-J5-Ji.T-I-KE.L3 {
+	height:27px !important;
+    width:115px !important;
+	font-family:arial, sans-serif !important;
+	font-size:11px !important;
+	font-weight:bold !important;
+	text-align:center !important;
+	text-transform:uppercase !important;
+	line-height:27px !important;
+	padding: 0 8px !important;
+	background-color:#d14836 !important;
+	color:#fff !important;
+    border-radius:2px !important;
+    display: block !important;
+}
+/*change compose btn on hover*/
+.T-I.J-J5-Ji.T-I-KE.L3:hover {
+	background-image:linear-gradient(to bottom,#dd4639,#d14836) !important;
+}
