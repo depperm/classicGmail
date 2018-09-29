@@ -24,7 +24,7 @@ function save_options() {
     var compose = document.getElementById('compose').checked;
     var buttons = document.getElementById('buttons').checked;
     var shadow = document.getElementById('shadow').checked;
-    var lefticon = document.getElementById('lefticons').checked;
+    var lefticons = document.getElementById('lefticons').checked;
 	
     chrome.storage.sync.set({
 		everything: everything,

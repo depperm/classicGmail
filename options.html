@@ -4,11 +4,35 @@
 	<title>Classic Gmail Options</title>
 	<style>
 	body{
-		min-width:200px;
+		min-width:300px;
 		overflow-x:hidden;
 	}
 	#status{
 		font-size:16px;
+	}
+	#img_compose{
+		display:none;
+	}
+	#ex_compose:active #img_compose{
+		display:block;
+	}
+	#img_buttons{
+		display:none;
+	}
+	#ex_buttons:active #img_buttons{
+		display:block;
+	}
+	#img_shadow{
+		display:none;
+	}
+	#ex_shadow:active #img_shadow{
+		display:block;
+	}
+	#img_icons{
+		display:none;
+	}
+	#ex_icons:active #img_icons{
+		display:block;
 	}
 	</style>
 	<script src="jquery-3.3.1.min.js"></script>
@@ -17,25 +41,42 @@
 	<input type="checkbox" id='everything' class='classic-gmail-checkbox' checked='true' />
 	Everything
 	<hr>
-	<label>
-		<input type="checkbox" id='compose' class='specific classic-gmail-checkbox' checked='true' />
-		Old compose button
-	</label>
-	<br />
-	<label>
-		<input type="checkbox" id='buttons' class='specific classic-gmail-checkbox' checked='true' />
-		Cleaner buttons at the top
-	</label>
-	<br />
-	<label>
-		<input type="checkbox" id='shadow' class='specific classic-gmail-checkbox' checked='true' />
-		No inbox mouseover shadow
-	</label>
-	<br />
-	<label>
-		<input type="checkbox" id='lefticons' class='specific classic-gmail-checkbox' checked='true' />
-		Left icons by folder name
-	</label>
+
+	<input type="checkbox" id='compose' class='specific classic-gmail-checkbox' checked='true' />
+	Old compose button
+	<section id="ex_compose">
+	   Click & hold for example
+	   <span id="img_compose" style="font-size:16;">
+	   <img src="images/compose_new.png"> to 
+	   <img src="images/compose_old.png"></span>
+	</section>
+
+	<input type="checkbox" id='buttons' class='specific classic-gmail-checkbox' checked='true' />
+	Cleaner buttons at the top
+	<section id="ex_buttons">
+	   Click & hold for example
+	   <span id="img_buttons" style="font-size:16;">
+	   <img src="images/buttons_new.png"> to 
+	   <img src="images/buttons_old.png"></span>
+	</section>
+
+	<input type="checkbox" id='shadow' class='specific classic-gmail-checkbox' checked='true' />
+	No inbox mouseover shadow
+	<section id="ex_shadow">
+	   Click & hold for example
+	   <span id="img_shadow" style="font-size:16;">
+	   <img src="images/shadow_new.png"> to 
+	   <img src="images/shadow_old.png"></span>
+	</section>
+
+	<input type="checkbox" id='lefticons' class='specific classic-gmail-checkbox' checked='true' />
+	Left icons by folder name
+	<section id="ex_icons">
+	   Click & hold for example
+	   <span id="img_icons" style="font-size:16;">
+	   <img src="images/icons_new.png"> to 
+	   <img src="images/icons_old.png"></span>
+	</section>
 
 	<div id="status"></div>
 	<button id="save">Save</button>
