@@ -4,8 +4,7 @@
 	<title>Classic Gmail Options</title>
 	<style>
 	body{
-		min-width:300px;
-		overflow-x:hidden;
+		min-width:310px;
 	}
 	#status{
 		font-size:16px;
@@ -34,8 +33,31 @@
 	#ex_icons:active #img_icons{
 		display:block;
 	}
+	#img_tabs{
+		display:none;
+	}
+	#ex_tabs:active #img_tabs{
+		display:block;
+	}
+    #composecolor,#composedefault{
+        width:115px;
+        height:27px;
+        line-height:27px;
+        text-align: center;
+        border-radius:2px;
+        margin:5px;
+        display:inline-block;
+    }
+    #composedefault{
+        background-color:#d14836;
+        color:white;
+    }
+    body > div:last-child {
+        margin: 150px 0 0 100px;
+    }
 	</style>
 	<script src="jquery-3.3.1.min.js"></script>
+    <script src="jscolor.js"></script>
 </head>
 <body>
 	<input type="checkbox" id='everything' class='classic-gmail-checkbox' checked='true' />
@@ -77,7 +99,25 @@
 	   <img src="images/icons_new.png"> to 
 	   <img src="images/icons_old.png"></span>
 	</section>
-
+    
+    <input type="checkbox" id='tabs' class='specific classic-gmail-checkbox' checked='true' />
+	Tabs
+	<section id="ex_tabs">
+	   Click & hold for example
+	   <span id="img_tabs" style="font-size:16;">
+	   <img src=""> to 
+	   <img src=""></span>
+	</section>
+    
+    <input type="button" value="Show Advanced Parameters" id="advbtn"/>
+    <div id="advancedparameters" style="display:none">
+        <div id='composecolor'>Compose
+            <input id="color-picker" class="jscolor {styleElement:'composecolor',value:'d14836'}" hidden />
+        </div>
+        <div id='composedefault'>RESET</div>
+        <br />
+        Compose Button color
+    </div>
 	<div id="status"></div>
 	<button id="save">Save</button>
 

@@ -4,10 +4,30 @@
 	border-radius: 3px !important;
 	margin: 0 !important;
 }
+/*rid transparency*/
+.aAA.J-KU-Jg-K9{
+    background:transparent !important;
+}
+/*tabs looks like tabs*/
+.J-KU-Jg-K9.aAA .aAy{
+	border-right: 1px solid #f2f2f2 !important;
+	border-left: 1px solid #f2f2f2 !important;
+}
 /*active tab looks like tab*/
 .J-KU-Jg-K9.aAA .J-KU-KO.aAy{
 	border-right: 1px solid #DDDEDD !important;
 	border-left: 1px solid #DDDEDD !important;
+    background:white !important;
+}
+/*inactive tab*/
+/*.J-KU-Jg-K9.aAA .aAy:not(.J-KU-KO){
+    
+}*/
+/*bottom bit*/
+.aKh+div{
+    display:block;
+    background-color:#fff;
+    height:6px;
 }
 /*.aeF>.nH>.nH[role="main"]>.aKB{
 	display:block !important;

@@ -2,3 +2,20 @@
 .qj.qr{
 	display:none !important;
 }
+/*left colored bar*/
+.aim{
+    border-left-color:#d14836;
+    border-left-width:5px;
+}
+/*color active folder text*/
+.ain a{
+    color:#d14836 !important;
+}
+/*active folder not highlighted*/
+.TK .TO:active, .n6 .ah9.aiu:active, .CL:active, .TO.nZ, .TO.ol{
+    background-color:transparent !important;
+}
+/*no hover*/
+.TO.NQ{
+    background-color:transparent !important;
+}

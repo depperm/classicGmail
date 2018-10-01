@@ -2,20 +2,53 @@
 #\:5{
 	height: 66px !important;/*48+18*/
 }
+/*move left buttons flush to inbox*/
+.bzn .G-Ni{
+    margin-left:-29px !important;
+}
 /*buttons*/
 .T-I.J-J5-Ji.T-I-ax7,.T-I.J-J5-Ji.T-I-ax7:hover,.T-I.J-J5-Ji.T-I-ax7:active
 {
 	background-image:linear-gradient(to bottom,#F5F5F5,#F0F0F0) !important;
-	border-radius:2px !important;
 	height:18px !important;
 	padding:10px !important;
-	border:1px solid #BBBBBB !important;
+	border:1px solid #bdbdbd !important;
 }
-#itamenu{
+/*spacing*/
+.G-Ni.G-aE{
+    margin-right:20px !important;
+}
+/*group archive,spam,trash*/
+[data-tooltip=Archive]{
+    margin-right:0 !important;
+    border-radius:3px 0 0 3px !important;
+}
+[data-tooltip='Report spam']{
+    margin:0 !important;
+    border-radius:0 !important;
+}
+[data-tooltip='Delete']{
+    margin:0 !important;
+    border-radius:0 3px 3px 0 !important;
+}
+/*[data-tooltip='Mark as unread']{
+  background-color:red;
+}*/
+/*.mA{
+    margin-left:0 !important;
+    margin-right:-1px !important;
+}*/
+/*the keyboard*/
+.d-Na-M8-JF{
 	background-image:linear-gradient(to bottom,#F5F5F5,#F0F0F0) !important;
-	border-radius:2px !important;
+	border-radius:3px !important;
 	height:18px !important;
-	padding:10px 0 !important;
+	padding:10px !important;
+	border:1px solid #bdbdbd !important;
+}
+/*gear arrow*/
+.ash>.G-asx{
+    display:block !important;
 }
 /*... to more*/
 .asa.bjy{
@@ -31,15 +64,25 @@
 	display:inline-block !important;
 }
 /*chevrons*/
-.Di{
+.Di,.iG,.h0{
 	padding:10px !important;
 }
 .T-I.J-J5-Ji.adg.T-I-awG.T-I-ax7.T-I-Js-IF.L3,.T-I.J-J5-Ji.adg.T-I-awG.T-I-ax7.T-I-Js-Gs.L3{
 	background-image:linear-gradient(to bottom,#F5F5F5,#F0F0F0) !important;
-	border-radius:2px !important;
 	height:18px !important;
 	padding:10px  !important;
-	border:1px solid #BBBBBB !important;
+	border:1px solid #bdbdbd !important;
+}
+/*round corners correctly*/
+[data-tooltip=Older]{
+    border-radius:0 3px 3px 0 !important;
+}
+[data-tooltip=Newer]{
+    border-radius:3px 0 0 3px !important;
+}
+/*get rid of gap between chevrons*/
+.TI .T-I-ax7.T-I-Js-Gs, .G-atb .T-I-ax7.T-I-Js-Gs{
+    margin-left:-1px !important;
 }
 /*button icons*/
 .adj,.amI{
