@@ -15,7 +15,7 @@
 		"storage","activeTab"
 	  ],
     "web_accessible_resources": [
-      	"classic.js","shadow.css","buttons.css","compose.css","lefticons.css"
+      	"classic.js","shadow.css","buttons.css","compose.css","lefticons.css","tabs.css"
     ],
     "background":{
         "scripts":["jquery-3.3.1.min.js"]

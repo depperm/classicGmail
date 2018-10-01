@@ -1,0 +1,18 @@
+/*color bit to top*/
+.J-KU-KO.aAy:before{
+	top:0 !important;
+	border-radius: 3px !important;
+	margin: 0 !important;
+}
+/*active tab looks like tab*/
+.J-KU-Jg-K9.aAA .J-KU-KO.aAy{
+	border-right: 1px solid #DDDEDD !important;
+	border-left: 1px solid #DDDEDD !important;
+}
+/*.aeF>.nH>.nH[role="main"]>.aKB{
+	display:block !important;
+}*/
+.aeF>.nH>.nH[role="main"]>.aKB::after{
+	background:red;
+}
+/*rgba(255,255,255,0.902)*/

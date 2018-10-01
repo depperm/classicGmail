@@ -1,4 +1,4 @@
-/*remove icons from left col*/
+/*remove icons from left col & left align*/
 .qj.qr{
-	background-image:none !important;
+	display:none !important;
 }

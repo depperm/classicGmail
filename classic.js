@@ -30,6 +30,7 @@ window.onload = function () {
 			loadCSS('compose');
 			loadCSS('lefticons');
 			loadCSS('buttons');
+			loadCSS('tabs');
 		}else{
 			if(items.shadow)
 				loadCSS('shadow');

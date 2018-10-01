@@ -1,6 +1,6 @@
 /*button stylings .aeH*/
 #\:5{
-	height: 66px !important;
+	height: 66px !important;/*48+18*/
 }
 /*buttons*/
 .T-I.J-J5-Ji.T-I-ax7,.T-I.J-J5-Ji.T-I-ax7:hover,.T-I.J-J5-Ji.T-I-ax7:active
@@ -9,6 +9,26 @@
 	border-radius:2px !important;
 	height:18px !important;
 	padding:10px !important;
+	border:1px solid #BBBBBB !important;
+}
+#itamenu{
+	background-image:linear-gradient(to bottom,#F5F5F5,#F0F0F0) !important;
+	border-radius:2px !important;
+	height:18px !important;
+	padding:10px 0 !important;
+}
+/*... to more*/
+.asa.bjy{
+	margin: 0 !important;
+	line-height:40px !important;
+	color: #363636 !important;
+	font-size: 16px !important;
+}
+.asa.bjy::after{
+	content:none !important;
+}
+.nf>.G-asx{
+	display:inline-block !important;
 }
 /*chevrons*/
 .Di{
@@ -19,6 +39,7 @@
 	border-radius:2px !important;
 	height:18px !important;
 	padding:10px  !important;
+	border:1px solid #BBBBBB !important;
 }
 /*button icons*/
 .adj,.amI{
