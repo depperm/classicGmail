@@ -16,6 +16,7 @@ $(function() {
 		}
 	}
 	$('.classic-gmail-checkbox').on('click',check_checkboxes);
+	// toggles adv param
     $('#advbtn').on('click',function(){
         $('#advancedparameters').toggle();
         if($('#advancedparameters').is(':visible'))
@@ -23,7 +24,7 @@ $(function() {
         else
             $('#advbtn').val("Show Advanced Parameters");
     });
-    
+    //color picker
     var colorpicker=false;
     $('#composecolor').on('click',function(){
         console.log('clicked');

@@ -15,29 +15,57 @@
 	border:1px solid #bdbdbd !important;
 }
 /*spacing*/
+/* checkbox right margin*/
+.bzn .G-Ni:first-of-type{
+	margin-right:20px !important;
+}
+/*buttons of open email*/
 .G-Ni.G-aE{
     margin-right:20px !important;
 }
 /*group archive,spam,trash*/
-[data-tooltip=Archive]{
+.bzn .G-Ni:nth-of-type(2){
+	margin-right:20px !important;
+}
+[title=Archive],[data-tooltip=Archive]:not(.bqX){
     margin-right:0 !important;
     border-radius:3px 0 0 3px !important;
 }
-[data-tooltip='Report spam']{
+[title='Report spam'],[data-tooltip='Report spam']{
     margin:0 !important;
     border-radius:0 !important;
 }
-[data-tooltip='Delete']{
+[title='Delete'],[data-tooltip=Delete]:not(.bqX){
     margin:0 !important;
     border-radius:0 3px 3px 0 !important;
 }
-/*[data-tooltip='Mark as unread']{
-  background-color:red;
-}*/
-/*.mA{
-    margin-left:0 !important;
-    margin-right:-1px !important;
-}*/
+/*group move,tag*/
+.bzn .G-Ni:nth-of-type(4){
+	margin-right:20px !important;
+}
+[title='Move to'],[data-tooltip='Move to']{
+    margin-right:0 !important;
+    border-radius:3px 0 0 3px !important;
+}
+[title=Labels],[data-tooltip=Labels]{
+    border-radius: 0 3px 3px 0 !important;
+}
+/*group mark,snooze*/
+.bzn .G-Ni:nth-of-type(3){
+	margin-right:20px !important;
+}
+[title='Mark as unread'],[data-tooltip='Mark as unread']:not(.bqX),[data-tooltip='Mark as read']:not(.bqX){
+    margin-right:0 !important;
+    border-radius:3px 0 0 3px !important;
+}
+[title=Snooze],[data-tooltip=Snooze]:not(.bqX){
+	margin-left:-1px !important;
+    border-radius: 0 3px 3px 0 !important;
+}
+/*refresh spacing*/
+.bzn .G-Ni:nth-of-type(5){
+    margin-right:20px;
+}
 /*the keyboard*/
 .d-Na-M8-JF{
 	background-image:linear-gradient(to bottom,#F5F5F5,#F0F0F0) !important;
@@ -138,4 +166,12 @@
 }
 .ar6{
 	background-image:url('https://www.gstatic.com/images/icons/material/system/1x/arrow_back_black_20dp.png') !important;
+}
+/*save to my drive*/
+.aQu{
+	background: no-repeat url(https://ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png) -201px -47px
+}
+/*download attachment*/
+.aSK{
+	background: no-repeat url(https://ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png) -88px -129px;
 }
