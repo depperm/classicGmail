@@ -1,4 +1,4 @@
-let num_options=4;
+let num_options=5;
 $(function() {
 	//simply checks the checkboxes appropriately
 	function check_checkboxes(){
@@ -32,28 +32,56 @@ $(function() {
             var t=$('#composecolor').css('background-color');
             t=t.slice(4,t.length-1);
             t=t.split(',');
-            console.log(rgbToHex(parseInt(t[0]),parseInt(t[1]),parseInt(t[2])).slice(1));
-            //document.getElementById('color-picker').value=rgbToHex(parseInt(t[0]),parseInt(t[1]),parseInt(t[2])).slice(1);
-            //$('#color-picker').val(rgbToHex(parseInt(t[0]),parseInt(t[1]),parseInt(t[2])).slice(1));
             $('#color-picker').attr('value',rgbToHex(parseInt(t[0]),parseInt(t[1]),parseInt(t[2])).slice(1));
-            //$('#color-picker').css('background-color',$('#composecolor').css('background-color'));
             document.getElementById('color-picker').jscolor.show();
+			$('body > div:last-child').css('margin','150px 0 0 100px');
         }else{
             document.getElementById('color-picker').jscolor.hide();
-            $('#color-picker').toggleClass('jscolor');
         }
         colorpicker=!colorpicker;
-        //onclick="document.getElementById('color-picker').jscolor.show()"
     });
+	//button color picker
+	var buttoncolorpicker=false;
+    $('#buttoncolors').on('click',function(){
+		if($('#buttonscustom').is(':checked')){
+			if(!buttoncolorpicker){
+				var t=$('#buttoncolors').css('background-color');
+				t=t.slice(4,t.length-1);
+				t=t.split(',');
+				$('#button-color-picker').attr('value',rgbToHex(parseInt(t[0]),parseInt(t[1]),parseInt(t[2])).slice(1));
+				document.getElementById('button-color-picker').jscolor.show();
+				$('body > div:last-child').css('margin','300px 0 0 100px');
+			}else{
+				document.getElementById('button-color-picker').jscolor.hide();
+			}
+			buttoncolorpicker=!buttoncolorpicker;
+		}
+    });
+	//change compose btn color
     $('#color-picker').on('change',function(){
         $('#composecolor').css('background-color','#'+$(this).val());
         $('#composecolor').css('color',$(this).css('color'));
     });
+	//reset compose btn color
     $('#composedefault').on('click',function(){
         $('#color-picker').attr('value','d14836');
         $('#composecolor').css('background-color','#d14836');
         $('#composecolor').css('color','white');
     });
+	//change more btn color
+	$('#button-color-picker').on('change',function(){
+		$('#buttoncolors').css('background-color','#'+$(this).val());
+        $('#buttoncolors').css('color',$(this).css('color'));
+	});
+	$('input[name=buttoncolor]').on('click',function(){
+		if($(this).attr('id')=='buttonsdefault'){
+			$('#buttoncolors').css('background-color','#F5F5F5');
+			$('#buttoncolors').css('color','black');
+		}else if($(this).attr('id')=='buttonscompose'){
+			$('#buttoncolors').css('background-color',$('#composecolor').css('background-color'));
+			$('#buttoncolors').css('color',$('#composecolor').css('color'));
+		}
+	});
 });
 function componentToHex(c) {
     var hex = c.toString(16);
@@ -74,6 +102,12 @@ function save_options() {
     var composeBGColor = $('#color-picker').val();
     var composeColor = $('#color-picker').css('color');
 	
+	var buttonColorSelection=$('input[name=buttoncolor]:checked').attr('id');
+	var buttonsBGColor = $('#button-color-picker').val();
+	var buttonsColor = $('#button-color-picker').val('color');
+	console.log(buttonsBGColor);
+	console.log(buttonsColor);
+	
     chrome.storage.sync.set({
 		everything: everything,
 		compose: compose,
@@ -82,7 +116,10 @@ function save_options() {
 		lefticons:lefticons,
         tabs:tabs,
         composeBGColor:composeBGColor,
-        composeColor:composeColor
+        composeColor:composeColor,
+		buttonColorSelection:buttonColorSelection,
+		buttonsBGColor:buttonsBGColor,
+		buttonsColor:buttonsColor
     }, function() {
 		// Update status to let user know options were saved.
 		var status = document.getElementById('status');
@@ -104,8 +141,12 @@ function restore_options() {
 		lefticons:true,
         tabs:true,
         composeBGColor:'d14836',
-        composeColor:'rgb(255,255,255)'
+        composeColor:'rgb(255,255,255)',
+		buttonColorSelection:'buttonsdefault',
+		buttonsBGColor:'F5F5F5',
+		buttonsColor:'rgb(0,0,0)'
     }, function(items) {
+		console.log(items.buttonColorSelection);
 		document.getElementById('everything').checked = items.everything;
 		document.getElementById('compose').checked = items.compose;
 		document.getElementById('buttons').checked = items.buttons;
@@ -116,6 +157,12 @@ function restore_options() {
         document.getElementById('composecolor').value = items.composeBGColor;
         $('#composecolor').css('background-color','#'+items.composeBGColor);
         $('#composecolor').css('color',items.composeColor);
+		
+		document.getElementById('buttoncolors').value = items.buttonsBGColor;
+        $('#buttoncolors').css('background-color','#'+items.buttonsBGColor);
+        $('#buttoncolors').css('color',items.buttonsColor);
+		$('#'+items.buttonColorSelection).prop('checked',true);
+		//document.getElementById('buttonsequalcompose').checked = items.buttonsequalcompose;
         //document.getElementById('composecolor').style.backgroundColor = items.composeBGColor;
         //document.getElementById('composecolor').style.color = items.composeColor;
     });

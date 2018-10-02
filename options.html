@@ -48,6 +48,16 @@
         margin:5px;
         display:inline-block;
     }
+	#buttoncolors{
+		width:82px;
+        height:27px;
+        line-height:27px;
+        text-align: center;
+        border-radius:2px;
+        margin:5px;
+        display:inline-block;
+		background-color:#F5F5F5;
+	}
     #composedefault{
         background-color:#d14836;
         color:white;
@@ -105,19 +115,33 @@
 	<section id="ex_tabs">
 	   Click & hold for example
 	   <span id="img_tabs" style="font-size:16;">
-	   <img src=""> to 
-	   <img src=""></span>
+	   <img src="images/tabs_new.png"> to 
+	   <img src="images/tabs_old.png"></span>
 	</section>
     
     <input type="button" value="Show Advanced Parameters" id="advbtn"/>
     <div id="advancedparameters" style="display:none">
+		<!--TODO: disable if compose not enabled-->
+        Compose Button color
+        <br />
         <div id='composecolor'>Compose
             <input id="color-picker" class="jscolor" style="{styleElement:'composecolor',value:'d14836'}" hidden />
         </div>
         <div id='composedefault'>RESET</div>
-        <br />
-        Compose Button color
+		<!--TODO: disable if compose and buttons not enabled-->
+		<hr>
+		Button Colors
+		<form action="">
+		    <input type="radio" name="buttoncolor" id="buttonsdefault" checked="checked"> Default<br>
+		    <input type="radio" name="buttoncolor" id="buttonscompose"> Compose<br>
+			<!--icon color: if (red*0.299 + green*0.587 + blue*0.114) > 186 use #000000 else use #ffffff-->
+		    <input type="radio" name="buttoncolor" id="buttonscustom" > Custom
+		</form>
+		<div id='buttoncolors'>More
+            <input id="button-color-picker" class="jscolor" style="{styleElement:'buttoncolors',value:'d14836'}" hidden />
+        </div>
     </div>
+	
 	<div id="status"></div>
 	<button id="save">Save</button>
 
