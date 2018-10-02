@@ -24,7 +24,7 @@ $(function() {
         else
             $('#advbtn').val("Show Advanced Parameters");
     });
-    //color picker
+    //compose color picker
     var colorpicker=false;
     $('#composecolor').on('click',function(){
         console.log('clicked');
@@ -101,10 +101,12 @@ function save_options() {
     
     var composeBGColor = $('#color-picker').val();
     var composeColor = $('#color-picker').css('color');
+	console.log(composeBGColor);
+	console.log(composeColor);
 	
 	var buttonColorSelection=$('input[name=buttoncolor]:checked').attr('id');
 	var buttonsBGColor = $('#button-color-picker').val();
-	var buttonsColor = $('#button-color-picker').val('color');
+	var buttonsColor = $('#button-color-picker').css('color');
 	console.log(buttonsBGColor);
 	console.log(buttonsColor);
 	

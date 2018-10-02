@@ -47,6 +47,8 @@ window.onload = function () {
 		
 		var advcss=[];
 		if(items.composeBGColor!='d14836'){
+			console.log(items.composeColor);
+			console.log(items.composeBGColor);
 			//compose button color
 			advcss.push('.T-I.J-J5-Ji.T-I-KE.L3{ color:'+items.composeColor+' !important;background-color:#'+items.composeBGColor+' !important;}');
 			if(items.lefticons){

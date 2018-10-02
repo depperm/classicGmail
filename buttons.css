@@ -4,7 +4,7 @@
 }
 /*move left buttons flush to inbox*/
 .bzn .G-Ni{
-    margin-left:-29px !important;
+    margin-left:-28px !important;
 }
 /*buttons*/
 .T-I.J-J5-Ji.T-I-ax7,.T-I.J-J5-Ji.T-I-ax7:hover,.T-I.J-J5-Ji.T-I-ax7:active
@@ -12,7 +12,7 @@
 	background-color:#F5F5F5 !important;
 	height:18px !important;
 	padding:10px !important;
-	border:1px solid #bdbdbd !important;
+	border:1pt solid rgba(0,0,0, 0.25); !important;
 }
 /*spacing*/
 /* checkbox right margin*/
@@ -72,7 +72,7 @@
 	border-radius:3px !important;
 	height:18px !important;
 	padding:10px !important;
-	border:1px solid #bdbdbd !important;
+	border:1pt solid rgba(0,0,0, 0.25); !important;
 }
 /*gear arrow*/
 .ash>.G-asx{
@@ -99,7 +99,7 @@
 	background-color:#F5F5F5 !important;
 	height:18px !important;
 	padding:10px  !important;
-	border:1px solid #bdbdbd !important;
+	border:1pt solid rgba(0,0,0, 0.25); !important;
 }
 /*round corners correctly*/
 [data-tooltip=Older]{
