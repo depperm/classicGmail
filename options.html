@@ -49,8 +49,8 @@
         display:inline-block;
     }
 	#buttoncolors{
-		width:82px;
-        height:27px;
+		width:43px;
+        height:41px;
         line-height:27px;
         text-align: center;
         border-radius:2px;
@@ -60,10 +60,22 @@
 	}
     #composedefault{
         background-color:#d14836;
-        color:white;
+        color:rgb(255,255,255);
     }
     body > div:last-child {
         margin: 150px 0 0 100px;
+    }
+    #icon{
+        background-image: url('https://www.gstatic.com/images/icons/material/system/1x/mark_as_unread_black_20dp.png');
+        background-repeat:no-repeat;
+        background-position:center;
+        vertical-align:middle;
+        height:20px;
+        width:20px;
+        display:inline-block;
+        padding:10px;
+        border:1pt solid rgba(0,0,0, 0.25); !important;
+        border-radius:2px;
     }
 	</style>
 	<script src="jquery-3.3.1.min.js"></script>
@@ -75,7 +87,7 @@
 	<hr>
 
 	<input type="checkbox" id='compose' class='specific classic-gmail-checkbox' checked='true' />
-	Old compose button
+	Old Compose Button
 	<section id="ex_compose">
 	   Click & hold for example
 	   <span id="img_compose" style="font-size:16;">
@@ -84,7 +96,7 @@
 	</section>
 
 	<input type="checkbox" id='buttons' class='specific classic-gmail-checkbox' checked='true' />
-	Cleaner buttons at the top
+	Cleaner Buttons Along the Top
 	<section id="ex_buttons">
 	   Click & hold for example
 	   <span id="img_buttons" style="font-size:16;">
@@ -122,23 +134,29 @@
     <input type="button" value="Show Advanced Parameters" id="advbtn"/>
     <div id="advancedparameters" style="display:none">
 		<!--TODO: disable if compose not enabled-->
-        Compose Button color
-        <br />
-        <div id='composecolor'>Compose
-            <input id="color-picker" class="jscolor" style="{styleElement:'composecolor',value:'d14836'}" hidden />
+        <div id='composeadvmsg'>Must enable 'Old Compose Button'</div>
+        <div id='composeadv' hidden>
+            Compose Button color
+            <br />
+            <div id='composecolor'>Compose
+                <input id="color-picker" class="jscolor" style="{styleElement:'composecolor',value:'d14836'}" hidden />
+            </div>
+            <div id='composedefault'>RESET</div>
         </div>
-        <div id='composedefault'>RESET</div>
 		<!--TODO: disable if compose and buttons not enabled-->
 		<hr>
-		Button Colors
-		<form action="">
-		    <input type="radio" name="buttoncolor" id="buttonsdefault" checked="checked"> Default<br>
-		    <input type="radio" name="buttoncolor" id="buttonscompose"> Compose<br>
-			<!--icon color: if (red*0.299 + green*0.587 + blue*0.114) > 186 use #000000 else use #ffffff-->
-		    <input type="radio" name="buttoncolor" id="buttonscustom" > Custom
-		</form>
-		<div id='buttoncolors'>More
-            <input id="button-color-picker" class="jscolor" style="{styleElement:'buttoncolors',value:'d14836'}" hidden />
+        <div id='buttonadvmsg'>Must enable 'Old Compose Button' and 'Cleaner Buttons Along the Top'</div>
+        <div id='buttonadv' hidden>
+            Button Colors
+            <form action="">
+                <input type="radio" name="buttoncolor" id="buttonsdefault" checked="checked"> Default<br>
+                <input type="radio" name="buttoncolor" id="buttonscompose"> Compose<br>
+                <!--icon color: if (red*0.299 + green*0.587 + blue*0.114) > 186 use #000000 else use #ffffff-->
+                <input type="radio" name="buttoncolor" id="buttonscustom" > Custom
+            </form>
+            <div id='buttoncolors'><div id='icon'></div>
+                <input id="button-color-picker" class="jscolor" style="{styleElement:'buttoncolors',value:'d14836'}" hidden />
+            </div>
         </div>
     </div>
 	

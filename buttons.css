@@ -2,6 +2,13 @@
 #\:5{
 	height: 66px !important;/*48+18*/
 }
+/*get rid of dinky line*/
+.G-atb::before{
+    -webkit-box-shadow:none !important;
+    box-shadow:none !important;
+}
+/*remove hover*/
+
 /*move left buttons flush to inbox*/
 .bzn .G-Ni{
     margin-left:-28px !important;
@@ -112,6 +119,10 @@
 .TI .T-I-ax7.T-I-Js-Gs, .G-atb .T-I-ax7.T-I-Js-Gs{
     margin-left:-1px !important;
 }
+/*icon opacity*/
+.T-I-ax7 .T-I-J3{
+    opacity:1 !important;
+}
 /*button icons*/
 .adj,.amI{
 	background-image:url('https://www.gstatic.com/images/icons/material/system/1x/chevron_left_black_20dp.png') !important;
@@ -169,7 +180,7 @@
 }
 /*save to my drive*/
 .aQu{
-	background: no-repeat url(https://ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png) -201px -47px
+	background: no-repeat url(https://ssl.gstatic.com/mail/sprites/newattachmentcards-ff2ce2bea04dec2bf32f2ebbfa0834ff.png) -201px -47px;
 }
 /*download attachment*/
 .aSK{
